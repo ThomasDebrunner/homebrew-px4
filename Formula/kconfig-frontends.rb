@@ -29,7 +29,7 @@ class KconfigFrontends < Formula
 
   def install
     system "./bootstrap"
-    system "./configure", "--disable-debug", "--disable-dependency-tracking",
+    system "./configure", "--disable-debug", "--disable-dependency-tracking", "--disable-nconf",
                           "--prefix=#{prefix}"
     system "make", "install"
   end
